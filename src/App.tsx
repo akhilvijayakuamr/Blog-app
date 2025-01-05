@@ -8,7 +8,7 @@ import CreatePost from './component/User/Post/CreatePost'
 import UpdatePost from './component/User/Home/UpdatePost/UpdatePost'
 import PublicRoute from './Route/PublicRoute'
 import PrivateRoute from './Route/PrivateRoute'
-import Smiley from './component/User/Loader/Smile'
+
 
 
 const App: React.FC = () => {

@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { userLogout } from '../../../redux/slice/userSlice';
 import { useNavigate } from 'react-router-dom';
 
-const Header = () => {
+const Header:React.FC = () => {
 
     const navigate = useNavigate()
     const dispatch = useDispatch()

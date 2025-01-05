@@ -3,8 +3,7 @@ import { deletePostApi, loginApi, postListApi, signUpApi, uniqPostApi, verifyApi
 import { AxiosError, AxiosResponse } from "axios";
 import { Dispatch } from "@reduxjs/toolkit";
 import { setUserLogin } from "../redux/slice/userSlice";
-import store from "../redux/store/store";
-const token = store.getState().auth.access;
+
 
 const headers = {
     'Content-Type': 'application/json'
