@@ -6,6 +6,7 @@ import { createPostAsync } from '../../../action/FileAction'
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { RootState } from '../../../redux/store/store'
+import { useNavigate } from 'react-router-dom'
 
 
 const CreatePost: React.FC = () => {
@@ -16,6 +17,8 @@ const CreatePost: React.FC = () => {
         description: '',
         image: null
     })
+
+    const navigate = useNavigate()
 
 
     const validatePostData = (): boolean => {
@@ -50,11 +53,11 @@ const CreatePost: React.FC = () => {
             const response = await dispatch(createPostAsync(postData) as any)
 
             if (response.status >= 200 && response.status < 300) {
-                console.log(response.message)
+                console.log(response)
                 toast.success(response.message, {
                     position: "top-right"
                 });
-                // navigate('/home')
+                navigate('/home')
 
             } else {
                 toast.error(response.message, {

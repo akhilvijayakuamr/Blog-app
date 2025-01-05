@@ -62,7 +62,7 @@ const UserHome: React.FC = () => {
             {postList.map((user, index) =>
                 <div className='box' key={index}>
                     <div className='box-top'>
-                        <img className="box-image" src={`${BASE_URL}${user.image}`}  alt={user.username} />
+                        <img className="box-image" src={`${BASE_URL}/${user.image}`}  alt={user.username} />
                         <div className="title-flex">
                             <h3 className="box-title">{user.username}</h3>
                             <p className="user-follow-info">{user.title}</p>
