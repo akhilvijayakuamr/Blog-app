@@ -27,6 +27,7 @@ const UserHome: React.FC = () => {
         
                     if (response.status >= 200 && response.status < 300) {
                         const newPost = response.data
+                        console.log(response.data)
                         setPostList(newPost)
                     } else {
                         toast.error(response.message, {
@@ -62,7 +63,7 @@ const UserHome: React.FC = () => {
             {postList.map((user, index) =>
                 <div className='box' key={index}>
                     <div className='box-top'>
-                        <img className="box-image" src={`${BASE_URL}/${user.image}`}  alt={user.username} />
+                        <img className="box-image" src={`${BASE_URL}${user.image}`}  alt={user.username} />
                         <div className="title-flex">
                             <h3 className="box-title">{user.username}</h3>
                             <p className="user-follow-info">{user.title}</p>

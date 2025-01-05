@@ -91,12 +91,11 @@ a {
 }
 
 .box-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    object-position: 50% 20%;
+    width: 300px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Cover the container, may crop the image */
+    object-position: 50% 50%; /* Center the image (both horizontally and vertically) */
 }
-
 
 .title-flex {
     display: flex;
@@ -113,6 +112,12 @@ a {
 
 .user-follow-info {
     color: hsl(0, 0%, 60%);
+    white-space: wrap;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: auto;
+    text-overflow: ellipsis;
 }
 
 

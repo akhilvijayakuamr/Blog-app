@@ -123,7 +123,7 @@ const PostView: React.FC = () => {
                     <div className='content'>
                         <h1 className='blog-title'>{post.title}</h1>
                         <div className="post-image-container">
-                            <img src={`${BASE_URL}/${post.image}`} alt="Blog Post" className="post-image" />
+                            <img src={`${BASE_URL}${post.image}`} alt="Blog Post" className="post-image" />
                         </div>
 
                         <p className='description'>{post.description}</p>
