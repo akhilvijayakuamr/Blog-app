@@ -1,0 +1,45 @@
+.post-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    height: 00px;
+    align-items: center;
+    
+  }
+  
+  .input-field,
+  .textarea-field {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .textarea-field {
+    height: 100px;
+  }
+  
+  .submit-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  
