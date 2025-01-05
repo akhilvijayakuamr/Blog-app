@@ -3,7 +3,7 @@ import axios, { AxiosResponse } from "axios";
 import { registerRequest, commonResponse, verifyRequest, loginRequest, loginResponse } from "../interface/AuthInterface";
 import { AllPost, CreatePostRequest, postUpdateRequest, postUpdateResponse } from "../interface/PostInterface";
 import { apiClient } from "../Intercepter/Intercepters";
-export const BASE_URL= 'http://localhost:8000'
+export const BASE_URL= import.meta.env.VITE_BASE_URL
 
 
 
