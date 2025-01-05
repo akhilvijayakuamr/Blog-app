@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Header.css'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useDispatch } from 'react-redux';
