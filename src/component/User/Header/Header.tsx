@@ -18,6 +18,10 @@ const Header:React.FC = () => {
       navigate('/home')
     }
 
+    const handlePost =()=>{
+      navigate('/createPost')
+    }
+
     return (
       <header>
          <input type='checkbox' name='' id='chk1'/>
@@ -30,6 +34,7 @@ const Header:React.FC = () => {
         </div>
         <ul>
           <li><a onClick={handleHome}>Home</a></li>
+          <li><a onClick={handlePost}>Create Post</a></li>
           <li><a onClick={handleLogout}>Logout</a></li>
         </ul>
         <div className='menu'>
