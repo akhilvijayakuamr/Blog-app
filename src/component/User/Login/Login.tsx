@@ -9,6 +9,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Login: React.FC = () => {
     const [isSignup, setIsSignup] = useState<boolean>(false)
+    const [load, setLoad] = useState<boolean>(false)
     const [signUpRequest, setSignUpRequest] = useState<registerRequest>({
         username: '',
         email: '',
@@ -64,18 +65,22 @@ const Login: React.FC = () => {
     const handleSignUp = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         if (!validateSignUpRequest()) return;
+        setLoad(!load)
         try {
             const response = await dispatch(signUpAsync(signUpRequest) as any);
             if (response.status >= 200 && response.status < 300) {
+                setLoad(!load)
                 toast.success(response.message, {
                     position: "top-right"
                 });
             } else {
+                setLoad(!load)
                 toast.error(response.message, {
                     position: "top-right"
                 });
             }
         } catch {
+            setLoad(!load)
             toast.error("After some time you will retry", {
                 position: "top-right"
             });
@@ -89,6 +94,7 @@ const Login: React.FC = () => {
     const handlelogin = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         if (!validateLoginRequest()) return;
+        setLoad(!load)
         try {
             const response = await dispatch(loginAsync(loginRequest) as any)
 
@@ -98,13 +104,16 @@ const Login: React.FC = () => {
                     position: "top-right"
                 });
                 navigate('/home')
+                setLoad(!load)
 
             } else {
+                setLoad(!load)
                 toast.error(response.message, {
                     position: "top-right"
                 });
             }
         } catch {
+            setLoad(!load)
             toast.error("After some time you will retry", {
                 position: "top-right"
             }); 3
